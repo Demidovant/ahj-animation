@@ -1,0 +1,72 @@
+{
+  "name": "ahj-animation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "test": {
+    "testEnvironment": "node",
+    "testTimeout": 35000
+  },
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint . --fix",
+    "test": "jest --testPathPattern=./src/ --passWithNoTests --detectOpenHandles",
+    "testcover": "jestjest --testPathPattern=./src/ --passWithNoTests --coverage",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run testcover",
+    "show:coverage": "live-server testcover/lcov-report",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Demidovant/ahj-animation"
+  },
+  "bugs": {
+    "url": "https://github.com/Demidovant/ahj-animation"
+  },
+  "author": "Demidovant",
+  "homepage": "https://github.com/Demidovant/ahj-animation",
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "appveyor": "^0.4.0",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^28.6.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "html-loader": "^5.0.0",
+    "jest": "^29.7.0",
+    "live-server": "^1.2.2",
+    "prettier": "3.3.2",
+    "resolve-url-loader": "^5.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "chokidar": "3.6.0",
+    "chromium": "^3.0.3",
+    "core-js": "^3.37.1",
+    "html-webpack-plugin": "^5.6.0",
+    "ini": "4.1.3",
+    "jest-each": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "puppeteer": "^22.11.2",
+    "puppeteer-core": "^22.11.2",
+    "push-dir": "^0.4.1",
+    "request": "^2.9.0",
+    "typescript": "^5.4.5",
+    "uuid": "10.0.0"
+  }
+}
